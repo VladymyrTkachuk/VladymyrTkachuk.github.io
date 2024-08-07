@@ -43,7 +43,7 @@ function cards() {
 
   // getResource("http://localhost:3000/menu").then((data) => {
   getResource(
-    "https://github.com/VladymyrTkachuk/VladymyrTkachuk.github.io/blob/main/food/db.json/menu"
+    "Access-Control-Allow-Origin: https://github.com/VladymyrTkachuk/VladymyrTkachuk.github.io/blob/main/food/db.json/menu"
   ).then((data) => {
     data.forEach(({ img, altimg, title, descr, price }) => {
       new MenuCard(
