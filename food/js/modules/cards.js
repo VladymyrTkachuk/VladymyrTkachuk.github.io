@@ -41,11 +41,21 @@ function cards() {
     }
   }
 
-  // getResource("http://localhost:3000/menu").then((data) => {
-  getResource(
-    "Access-Control-Allow-Origin: https://github.com/VladymyrTkachuk/VladymyrTkachuk.github.io/blob/main/food/db.json/menu"
-  ).then((data) => {
+  getResource("http://localhost:3000/menu").then((data) => {
     data.forEach(({ img, altimg, title, descr, price }) => {
+      new MenuCard(
+        img,
+        altimg,
+        title,
+        descr,
+        price,
+        ".menu .container"
+      ).render();
+    });
+  });
+
+  axios.get("db.json").then((data) => {
+    data.data.menu.forEach(({ img, altimg, title, descr, price }) => {
       new MenuCard(
         img,
         altimg,

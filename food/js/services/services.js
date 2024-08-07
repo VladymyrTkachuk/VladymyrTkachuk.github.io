@@ -20,5 +20,5 @@ async function getResource(url) {
   return await res.json();
 }
 
-export {postData};
-export {getResource};
+export { postData };
+export { getResource };
